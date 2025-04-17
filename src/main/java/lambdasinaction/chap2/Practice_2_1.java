@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Practice_2_1 {
 
-    public static void main(String ... args) {
+    public static void main(String ... args) { // “...” 是一种语法糖，方便灵活入参
 
         List<Apple> inventory = Arrays.asList(new Apple("green", 80),
                 new Apple("green", 155),
