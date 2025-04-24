@@ -1,7 +1,9 @@
 package lambdasinaction.chap2;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 测验2.1：编写灵活的prettyPrintApple方法（所在页码-26）
