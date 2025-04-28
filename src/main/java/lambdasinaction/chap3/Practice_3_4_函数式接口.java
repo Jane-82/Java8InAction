@@ -1,10 +1,9 @@
 package lambdasinaction.chap3;
 
 import java.util.Comparator;
-import java.util.List;
 import java.util.function.*;
 
-public class Practice_3_4 {
+public class Practice_3_4_函数式接口 {
 
     public static void main(String[] args) {
         /**
