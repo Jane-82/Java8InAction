@@ -1,5 +1,8 @@
 package lambdasinaction.chap5;
 
+/**
+ * 交易
+ */
 public class Transaction{
 
 	private Trader trader;
