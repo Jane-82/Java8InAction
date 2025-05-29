@@ -1,10 +1,11 @@
 package lambdasinaction.chap5;
 
+
 /**
  * 交易员
  */
-public  class Trader{
-	
+public class Trader{
+
 	private String name;
 	private String city;
 

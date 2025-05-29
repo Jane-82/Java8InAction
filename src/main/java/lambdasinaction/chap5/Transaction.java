@@ -9,6 +9,10 @@ public class Transaction{
 	private int year;
 	private int value;
 
+	public Transaction() {
+
+	}
+
 	public Transaction(Trader trader, int year, int value)
 	{
 		this.trader = trader;
