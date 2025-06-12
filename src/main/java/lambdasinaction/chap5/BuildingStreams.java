@@ -10,17 +10,19 @@ public class BuildingStreams {
 
     public static void main(String...args) throws Exception{
         
-        // Stream.of
+        // Stream.of 5.7.1
         Stream<String> stream = Stream.of("Java 8", "Lambdas", "In", "Action");
         stream.map(String::toUpperCase).forEach(System.out::println);
 
-        // Stream.empty
+        // Stream.empty 5.7.1
         Stream<String> emptyStream = Stream.empty();
 
-        // Arrays.stream
+        // Arrays.stream 5.7.2
         int[] numbers = {2, 3, 5, 7, 11, 13};
         System.out.println(Arrays.stream(numbers).sum());
 
+        // 5.7.4
+        // 迭代
         // Stream.iterate
         Stream.iterate(0, n -> n + 2)
               .limit(10)
@@ -36,6 +38,7 @@ public class BuildingStreams {
               . map(t -> t[0])  
               .forEach(System.out::println);
 
+        // 生成
         // random stream of doubles with Stream.generate
         Stream.generate(Math::random)
               .limit(10)
@@ -64,15 +67,15 @@ public class BuildingStreams {
                       return this.previous;
                   }
               };
-         IntStream.generate(fib).limit(10).forEach(System.out::println);
+        IntStream.generate(fib).limit(10).forEach(System.out::println);
 
-         long uniqueWords = Files.lines(Paths.get("src/main/java/lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
-                                 .flatMap(line -> Arrays.stream(line.split(" ")))
-                                 .distinct()
-                                 .count();
+        // 5.7.3 由文件生成流
+        long uniqueWords = Files.lines(Paths.get("src/main/java/lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
+                                .flatMap(line -> Arrays.stream(line.split(" ")))
+                                .distinct()
+                                .count();
 
          System.out.println("There are " + uniqueWords + " unique words in data.txt");
-
 
     }
 }

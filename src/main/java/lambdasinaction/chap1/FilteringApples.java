@@ -1,5 +1,7 @@
 package lambdasinaction.chap1;
 
+import lambdasinaction.chap3.Practice_3_7;
+
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -31,7 +33,22 @@ public class FilteringApples{
         List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 || 
                                                                        "brown".equals(a.getColor()));
         System.out.println(weirdApples);
+
+        List<Apple> list = getApple();
+        for (Apple a : list){
+            System.out.println(a);
+        }
     }
+
+    public static List<Apple> getApple(){
+        Apple a = new Apple();
+        a.setColor("testtest");
+        a.setWeight(100);
+        List<Apple> list = Collections.singletonList(a);
+        return list;
+    }
+
+
 
     public static List<Apple> filterGreenApples(List<Apple> inventory){
         List<Apple> result = new ArrayList<>();
